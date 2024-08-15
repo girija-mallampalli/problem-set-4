@@ -20,12 +20,19 @@ PART 4: CATEGORICAL PLOTS
 
 ##  PLOTS  ##
 # 1. Create a catplot where the categories are charge type and the y-axis is the prediction for felony rearrest. Set kind='bar'.
-
-
+def catplot_felony_rearrest(pred_universe):
+    sns.catplot(data=pred_universe, x='charge_degree', y='prediction_felony', kind='bar')
+    plt.savefig('../data/part4_plots/felony_rearrest_catplot.png', bbox_inches='tight')
+  
 # 2. Now repeat but have the y-axis be prediction for nonfelony rearrest
 # 
 # In a print statement, answer the following question: What might explain the difference between the plots?
+def catplot_nonfelony_rearrest(pred_universe):
+    sns.catplot(data=pred_universe, x='charge_degree', y='prediction_nonfelony', kind='bar')
+    plt.savefig('../data/part4_plots/nonfelony_rearrest_catplot.png', bbox_inches='tight')
 
+    # Interpretation
+    print("What might explain the difference between the plots?")
 
 # 3. Repeat the plot from 1, but hue by whether the person actually got rearrested for a felony crime
 # 
@@ -33,3 +40,9 @@ PART 4: CATEGORICAL PLOTS
 # What does it mean that prediction for arrestees with a current felony charge, 
 # but who did not get rearrested for a felony crime have a higher predicted probability than arrestees with a current misdemeanor charge, 
 # but who did get rearrested for a felony crime?
+def catplot_felony_rearrest_with_actual(pred_universe):
+    sns.catplot(data=pred_universe, x='charge_degree', y='prediction_felony', hue='rearrest_felony', kind='bar')
+    plt.savefig('../data/part4_plots/felony_rearrest_with_actual_catplot.png', bbox_inches='tight')
+
+    # Interpretation
+    print("What does it mean that prediction for arrestees with a current felony charge, but who did not get rearrested for a felony crime have a higher predicted probability than arrestees with a current misdemeanor charge, but who did get rearrested for a felony crime?")
