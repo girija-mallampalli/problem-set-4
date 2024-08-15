@@ -14,7 +14,8 @@ def scatterplot_felony_vs_nonfelony(pred_universe):
 
     # Interpretation
     print("What can you say about the group of dots on the right side of the plot?")
-  
+    print("They represent individuals with high predicted probabilities for both felony and nonfelony")
+    
 # 2. Create a scatterplot where the x-axis is prediction for felony rearrest and the y-axis is whether someone was actually rearrested.
 # 
 # In a print statement, answer the following question: Would you say based off of this plot if the model is calibrated or not?
@@ -24,3 +25,4 @@ def scatterplot_felony_vs_actual_rearrest(pred_universe):
   
     # Interpretation
     print("What does this plot suggest about how well the model is calibrated?")
+    print("The plot suggests that the model is well-calibrated")
