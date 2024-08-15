@@ -33,6 +33,7 @@ def catplot_nonfelony_rearrest(pred_universe):
 
     # Interpretation
     print("What might explain the difference between the plots?")
+    print("The way the model predicts felonies and nonfelony rearrest probabilities could explain the differences.")
 
 # 3. Repeat the plot from 1, but hue by whether the person actually got rearrested for a felony crime
 # 
@@ -46,3 +47,4 @@ def catplot_felony_rearrest_with_actual(pred_universe):
 
     # Interpretation
     print("What does it mean that prediction for arrestees with a current felony charge, but who did not get rearrested for a felony crime have a higher predicted probability than arrestees with a current misdemeanor charge, but who did get rearrested for a felony crime?")
+    print("It could mean that the model has certain biases or that the features used for prediction have a stronger association with felony charges, regardless of actual rearrest outcomes.")
