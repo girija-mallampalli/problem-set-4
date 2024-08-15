@@ -10,7 +10,7 @@ PART 5: SCATTER PLOTS
 # In a print statement, answer the following question: What can you say about the group of dots on the right side of the plot?
 def scatterplot_felony_vs_nonfelony(pred_universe):
     sns.lmplot(data=pred_universe, x='prediction_felony', y='prediction_nonfelony', hue='has_felony_charge', fit_reg=False)
-    plt.savefig('./data/part5_plots/scatter_felony_vs_nonfelony.png', bbox_inches='tight')
+    plt.savefig('../data/part5_plots/scatter_felony_vs_nonfelony.png', bbox_inches='tight')
 
     # Interpretation
     print("What can you say about the group of dots on the right side of the plot?")
@@ -20,7 +20,7 @@ def scatterplot_felony_vs_nonfelony(pred_universe):
 # In a print statement, answer the following question: Would you say based off of this plot if the model is calibrated or not?
 def scatterplot_felony_vs_actual_rearrest(pred_universe):
     sns.lmplot(data=pred_universe, x='prediction_felony', y='rearrest_felony', fit_reg=False)
-    plt.savefig('./data/part5_plots/scatter_felony_vs_actual_rearrest.png', bbox_inches='tight')
+    plt.savefig('../data/part5_plots/scatter_felony_vs_actual_rearrest.png', bbox_inches='tight')
   
     # Interpretation
     print("What does this plot suggest about how well the model is calibrated?")
